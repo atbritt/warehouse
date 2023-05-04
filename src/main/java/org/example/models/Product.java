@@ -98,6 +98,7 @@ public class Product {
         String newDetails = scanner.nextLine();
         System.out.println("What is the new product price?");
         Float newPrice = scanner.nextFloat();
+        scanner.nextLine();
 
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
             String sql = "UPDATE PRODUCT set  product_details = ?, product_price = ? where product_name = ?" ;
